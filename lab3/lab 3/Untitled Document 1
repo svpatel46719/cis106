@@ -1,0 +1,55 @@
+block attack
+dragon player'
+epiphany
+mail spring
+lollypop
+
+table 2 content
+vpatel@ubuntucis106:~$ echo "I Like Linux!" | lolcat
+I Like Linux!
+svpatel@ubuntucis106:~$ fortune | cowsay | lolcat
+Command 'fortune' not found, but can be installed with:
+sudo apt install fortune-mod
+ __
+<  >
+ --
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+svpatel@ubuntucis106:~$ figlet "Linux is cool"
+ _     _                    _                       _ 
+| |   (_)_ __  _   ___  __ (_)___    ___ ___   ___ | |
+| |   | | '_ \| | | \ \/ / | / __|  / __/ _ \ / _ \| |
+| |___| | | | | |_| |>  <  | \__ \ | (_| (_) | (_) | |
+|_____|_|_| |_|\__,_/_/\_\ |_|___/  \___\___/ \___/|_|
+                                                      
+svpatel@ubuntucis106:~$ ortune | toilet -f term -F border --metal
+Command 'ortune' not found, did you mean:
+  command 'fortune' from deb fortune-mod (1:1.99.1-7.1)
+Try: sudo apt install <deb name>
+svpatel@ubuntucis106:~$ rig | boxes -d boy
+        .-"""-.
+       / .===. \
+       \/ 6 6 \/
+       ( \___/ )
+  _ooo__\_____/______
+ /                   \
+| Thanh Travis        |
+| 510 Bourg St        |
+| Berkeley, CA  94704 |
+| (510) xxx-xxxx      |
+ \_______________ooo_/
+        |  |  |
+        |_ | _|
+        |  |  |
+        |__|__|  jgs
+        /-'Y'-\
+       (__/ \__)
+svpatel@ubuntucis106:~$ fortune | toilet -f term -F border --metal
+Command 'fortune' not found, but can be installed with:
+sudo apt install fortune-mod
+svpatel@ubuntucis106:~$ 
+
+
