@@ -1,15 +1,15 @@
-```
+````
     name : sahil v patel
     course: cis 106
     date: 10/08/23
-```
+````
 # lab 3 submission:
 
-## question 1:
+## Question 1:
 ![q1.1](1.1.png)
-## question 2:
+## Question 2:
 ![q2.0](2.1.png)
-## question 3:
+## Question 3:
 | Program purpose     | Package Name | Version              |
 | ------------------- | ------------ | ---------------------|
 | Play a tetris game  | blockattack  | (2.7.0-1)            |
@@ -18,7 +18,7 @@
 | Read your email     |  mailspring  | 1.11.0               |
 | Play music          |    lollypop  | (1.4.33-1 )          |
 
-## question 4:
+## Question 4:
 | command | what it does                                                                         |
 | ------- | ------------------------------------------------------------------------------------ |
 | echo    | display or print text                                                                |
