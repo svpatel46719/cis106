@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>deliverable 1.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<pre class="hljs"><code><div>    name: sahil v patel
+    course: cis 106
+    semester: spring 23
+</div></code></pre>
+<h1 id="deliverable-1">Deliverable 1</h1>
+<h3 id="concepts-that-i-didnt-understand">Concepts that I Didnt Understand:</h3>
+<p><strong>Read the tutorial. Write down every concept you don’t understand and research them.</strong></p>
+<h2 id="1-systemctl---in-linux-systemctl-is-a-command-line-utility-that-is-used-to-control-and-communicate-with-the-systemd-system-and-service-manager-systemd-is-a-system-and-service-manager-for-linux-operating-systems-that-provides-a-range-of-features-including-managing-the-services-that-run-on-a-system">1 )<code>systemctl</code> - <strong>In Linux, systemctl is a command-line utility that is used to control and communicate with the systemd system and service manager. systemd is a system and service manager for Linux operating systems that provides a range of features, including managing the services that run on a system.</strong></h2>
+<p><strong>EXAMPLE : When it comes to Apache and systemctl, it is often used to start, stop, restart, enable, or disable the Apache HTTP Server.</strong></p>
+<h2 id="start-apache">Start Apache:</h2>
+<p><code>sudo systemctl start apache2</code>: Start Apache
+<code>sudo systemctl stop apache2</code> : Stop Apache</p>
+<h2 id="2-varlogapache2accesslog-is-the-default-location-for-the-apache-http-server-access-log-on-debian-based-linux-distributions-such-as-ubuntu-in-apache-the-access-log-records-all-requests-made-to-the-server-including-details-such-as-the-requesting-ip-address-the-requested-resource-the-http-status-code-and-the-user-agent">2) <code>/var/log/apache2/access.log</code> <strong>is the default location for the Apache HTTP Server access log on Debian-based Linux distributions, such as Ubuntu. In Apache, the access log records all requests made to the server, including details such as the requesting IP address, the requested resource, the HTTP status code, and the user agent.</strong></h2>
+<h2 id="example">EXAMPLE:</h2>
+<p><strong>/var: This directory typically contains variable data files.</strong></p>
+<p><strong>/log: This is a conventional name for log files.</strong></p>
+<p><strong>/apache2: This subdirectory is specific to Apache logs, separating them from other system logs.</strong></p>
+<p><strong>access.log: This is the actual log file that records information about every request made to the Apache server.</strong></p>
+<h2 id="3-a2enconf--command-in-apache-is-used-to-enable-a-configuration-file-for-a-particular-apache-module-or-feature-this-command-is-often-used-on-debian-based-systems-such-as-ubuntu-where-apache-configurations-are-organized-using-a-modular-structure">3) <code>a2enconf</code> : command in Apache is used to enable a configuration file for a particular Apache module or feature. This command is often used on Debian-based systems, such as Ubuntu, where Apache configurations are organized using a modular structure.</h2>
+<h2 id="example">EXAMPLE:</h2>
+<p><code>sudo a2enconf &lt;conf-name&gt;</code>: <conf-name> is the name of the configuration file you want to enable.</p>
+<h2 id="answer-the-following-questions">Answer The following questions:</h2>
+<h2 id="basic-terminology">Basic Terminology</h2>
+<h2 id="what-is-a-web-server-hardware-and-software-side">What is a Web Server? Hardware and Software side ?</h2>
+<p><img src="q1.1.jpg" alt="Alt text"> <img src="q1.png" alt="Alt text"></p>
+<p><strong>A web server is a crucial component in the infrastructure of the World Wide Web, responsible for delivering web pages to users' browsers. It operates on both hardware and software levels.</strong></p>
+<ul>
+<li>
+<p><strong>On the hardware side, a web server typically consists of a computer system specifically designed to handle web hosting tasks. This computer is equipped with components like a processor, memory (RAM), storage (hard drive or SSD), and network interface cards. The hardware should be capable of handling concurrent requests, meaning it needs sufficient processing power and memory to respond to multiple users simultaneously.</strong></p>
+</li>
+<li>
+<p><strong>On the software side, a web server relies on specialized programs to process and respond to incoming requests. Commonly used web server software includes Apache, Nginx, and Microsoft Internet Information Services (IIS). These software packages manage the communication between the server hardware and the user's web browser, handling tasks such as processing HTTP requests, executing server-side scripts (e.g., PHP or Python scripts), and sending back the requested web pages.</strong></p>
+</li>
+</ul>
+<h2 id="what-are-some-different-web-server-applications">What are some different web server applications ?</h2>
+<p><img src="q2.1.1.jpg" alt="Alt text"> <img src="q2.1.png" alt="Alt text"></p>
+<h2 id="apache-http-server">Apache HTTP Server:</h2>
+<p><strong>Definition: Apache is one of the most popular open-source web server software. It's known for its flexibility, stability, and scalability. Apache supports a variety of features, including the ability to serve static and dynamic content, handle virtual hosts, and support various programming languages. It works on multiple operating systems, making it a versatile choice for web hosting.</strong></p>
+<p><img src="q2.2.2.png" alt="Alt text"> <img src="q2.2.png" alt="Alt text"></p>
+<h2 id="nginx">Nginx:</h2>
+<p><strong>Definition: Nginx, pronounced &quot;engine-x,&quot; is a lightweight, high-performance web server and reverse proxy server. It's designed to efficiently handle a large number of concurrent connections and is often used to improve the performance and scalability of websites. Nginx excels at serving static content quickly and can also act as a load balancer to distribute incoming traffic across multiple servers, enhancing overall system reliability.</strong></p>
+<p><img src="q2.3.jpg" alt="Alt text"></p>
+<h2 id="microsoft-internet-information-services-iis">Microsoft Internet Information Services (IIS):</h2>
+<p><strong>Definition: IIS is a web server application developed by Microsoft for Windows Server operating systems. It is tightly integrated with the Windows environment and provides support for various Microsoft technologies such as ASP.NET and Microsoft SQL Server. IIS is user-friendly and offers features like security controls, application hosting, and support for various web protocols. It's a common choice for organizations using Windows-based servers.</strong></p>
+<p><img src="q3.png" alt="Alt text"></p>
+<h2 id="what-is-virtualization">What is virtualization ?</h2>
+<p><strong>Virtualization is a technology that allows multiple operating systems (OS) or applications to run on a single physical machine, referred to as the host. It creates a virtualized environment where each operating system or application operates independently, as if it were running on a dedicated physical server. This is achieved by using a hypervisor, which is a layer of software or firmware that sits between the hardware and the virtualized systems. The hypervisor allocates and manages the resources of the host machine, such as CPU, memory, and storage, among the virtualized instances. Virtualization is widely used in data centers, server environments, and for desktop computing to improve resource utilization, increase flexibility, and enhance scalability.</strong></p>
+<p><img src="q4.png" alt="Alt text"></p>
+<h2 id="what-is-virtualbox">What is virtualbox ?</h2>
+<p><strong>VirtualBox is a free and open-source virtualization platform developed by Oracle. It allows users to create and manage virtual machines (VMs) on their computers. VirtualBox supports various host operating systems, including Windows, macOS, Linux, and Solaris, making it a versatile choice for different users. With VirtualBox, you can run multiple virtual machines simultaneously, each running its own guest operating system. For example, you could run a Linux VM on a Windows host or vice versa.</strong></p>
+<p><img src="q5.png" alt="Alt text"></p>
+<h2 id="what-is-a-virtual-machine">What is a virtual machine ?</h2>
+<p><strong>A virtual machine (VM) is a software-based emulation of a physical computer. It runs an operating system (known as the guest OS) within another operating system (known as the host OS). Virtual machines are created by virtualization software or a hypervisor, which allocates a portion of the host machine's resources (such as CPU, memory, and storage) to the virtual machine. VMs operate independently, allowing multiple operating systems to run on a single physical machine. This technology is widely used in server environments, development and testing scenarios, and desktop computing to enhance flexibility, resource utilization, and isolation.</strong></p>
+<p><img src="q6.png" alt="Alt text"></p>
+<h2 id="what-is-ubuntu-server">What is Ubuntu Server ?</h2>
+<p><strong>Ubuntu Server is a version of the Ubuntu operating system specifically designed for server environments. It is based on the Debian Linux distribution and is known for its ease of use, stability, and strong community support. Ubuntu Server is a popular choice for various server applications, ranging from web hosting and file servers to database management and cloud computing.</strong></p>
+<p><img src="q7.png" alt="Alt text"></p>
+<h2 id="what-is-a-firewall">What is a firewall?</h2>
+<p><strong>A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. Its primary purpose is to establish a barrier between a trusted internal network and untrusted external networks, such as the internet. Firewalls can be implemented in both hardware and software forms and are essential for protecting computer systems and networks from unauthorized access, malicious activities, and potential security threats. Firewalls use various techniques, such as packet filtering, proxying, and stateful inspection, to determine whether to allow or block traffic.</strong></p>
+<h2 id="example">Example:</h2>
+<p><strong>- Imagine a corporate network with a firewall in place. The firewall might be configured to allow incoming traffic on specific ports, such as port 80 for HTTP or port 443 for HTTPS, to reach the web server. However, it could block incoming traffic on other ports to protect against potential security threats. Outgoing traffic might also be restricted, ensuring that sensitive data doesn't leave the network without proper authorization.</strong></p>
+<p><img src="q8.PNG" alt="Alt text"></p>
+<h2 id="what-is-ssh">What is SSH ?</h2>
+<p><strong>SSH, or Secure Shell, is a cryptographic network protocol used for secure communication over a potentially unsecured network. It allows users to access and control remote systems securely, providing a secure alternative to traditional, unencrypted methods like Telnet. SSH encrypts the data exchanged between the client and the server, preventing unauthorized access and protecting the confidentiality and integrity of the communication.</strong></p>
+<h2 id="example">Example:</h2>
+<p><strong>- Let's say an administrator needs to securely access a remote server. They can use SSH to establish a secure connection. The command might look like this: ssh username@remote_server. The user would then enter their password (or use key-based authentication) to gain access. Once connected, the administrator can execute commands on the remote server as if they were physically present, all within an encrypted and secure communication channel.</strong></p>
+<p>#THE END</p>
+
+</body>
+</html>
